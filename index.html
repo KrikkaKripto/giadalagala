@@ -10,30 +10,38 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            height: 100vh;
-            background-image: url('image.jpg'); /* Add your image URL here */
-            background-size: cover; /* Make the image cover the screen */
-            background-position: center; /* Center the image */
+        body, html {
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white; /* Text color */
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
         }
-        .content {
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-            padding: 20px;
-            border-radius: 10px;
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+        .image {
+            flex: 1;
+            background-image: url('my-image.jpg'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+        .text {
+            flex: 1;
+            background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+            color: white;
+            padding: 40px;
+            text-align: left;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 20px;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
         a {
             color: #fff;
@@ -43,11 +51,20 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>My Name</h1>
-        <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
+    <div class="container">
+        <div class="image"></div>
+        <div class="text">
+            <h1>Giada La Gala</h1>
+            <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
 Her work is an ongoing dialogue with nature’s hidden forces, black holes, volcanoes, and the subatomic world, honouring the physicality of materials, animated by emergent phenomena. She enacts her research through performative improvisation with the use of sculptures as instruments and tools, materializing the boundary where science and art converge.</p>
 </p>
+            <p>Contact me: <a href="mailto:your@email.com">your@email.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+        
         <p>Contact me: <a href="mailto:your@email.com">your@email.com</a></p>
     </div>
 </body>
