@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full viewport height */
-        background-color: black; /* Optional: background color */
-    }
-    img {
-        width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
-        object-fit: cover; /* Crop to fill the screen */
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        img { width: 300px; border-radius: 10px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background-image: url('image.jpg'); /* Add your image URL here */
+            background-size: cover; /* Make the image cover the screen */
+            background-position: center; /* Center the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Text color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1>Giada La Gala</h1>
-    <img src="image.jpg" alt="My Artwork">
-    <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
+    <div class="content">
+        <h1>My Name</h1>
+        <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
 Her work is an ongoing dialogue with nature’s hidden forces, black holes, volcanoes, and the subatomic world, honouring the physicality of materials, animated by emergent phenomena. She enacts her research through performative improvisation with the use of sculptures as instruments and tools, materializing the boundary where science and art converge.</p>
-    <p>Contact me: <a href="mailto:lafluorescienza@gmail.com">lafluorescienza@gmail.com</a></p>
+</p>
+        <p>Contact me: <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
 </body>
 </html>
