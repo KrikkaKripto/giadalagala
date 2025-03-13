@@ -13,6 +13,7 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         /* Full-screen image section */
@@ -25,15 +26,14 @@
             background-repeat: no-repeat;
         }
 
-        /* Transparent text section */
-        .text {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        /* Text section below the image */
+        .content {
+            position: relative;
+            padding: 60px 20px; /* Padding for the text box */
+            background-color: rgba(0, 0, 0, 0.6); /* 60% opacity for the black background */
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+            z-index: 10;
         }
 
         h1 {
@@ -57,6 +57,11 @@
             scroll-behavior: smooth;
         }
 
+        /* Adding space after the content to make the scrollable page work */
+        .spacer {
+            height: 200vh; /* Makes sure there's space to scroll down */
+        }
+
         /* Responsive Design for mobile and smaller screens */
         @media (max-width: 768px) {
             h1 {
@@ -75,7 +80,8 @@
 </head>
 <body>
     <div class="image"></div> <!-- Full-screen image -->
-    <div class="text">
+    <div class="content">
+
        
         <h1>Giada La Gala</h1>
             <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
