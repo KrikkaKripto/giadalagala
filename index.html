@@ -13,41 +13,46 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: row;
-            margin: 0;
         }
 
-        /* Left image side */
+        /* Full screen container */
+        .container {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Centered background image */
         .image {
-            width: 50%;  /* 50% width for the image */
-            height: 100vh;  /* Full screen height */
-            background-image: url('image.jpg');  /* Your image URL here */
-            background-size: cover;  /* Make sure it covers the entire section */
-            background-position: center;  /* Center the image */
-            background-repeat: no-repeat;  /* Prevent image repetition */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat;
         }
 
-        /* Right text section */
+        /* Text at the bottom */
         .text {
-            width: 50%;  /* 50% width for the text */
-            background-color: rgba(0, 0, 0, 1);  /* Solid black background */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
             color: white;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  /* Center the text vertically */
-            text-align: left;
+            text-align: center;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 2.5em; /* Smaller font size */
+            margin-bottom: 10px;
         }
 
         p {
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            font-size: 1.2em; /* Smaller font size */
+            margin-bottom: 10px;
         }
 
         a {
@@ -58,30 +63,34 @@
 
         /* Responsive Design for smaller screens */
         @media (max-width: 768px) {
-            body, html {
-                flex-direction: column;  /* Stack the image and text vertically on smaller screens */
-            }
-
             .image {
-                width: 100%;
-                height: 300px;  /* Limit image height on mobile */
+                height: 50vh; /* Make image smaller on mobile */
             }
 
             .text {
-                width: 100%;
-                padding: 20px;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="image"></div>
-    <div class="text">
-        <h1>Giada La Gala</h1>
-        <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
+    <div class="container">
+        <div class="image"></div> <!-- Background image covering the screen -->
+        <div class="text">
+            <h1>Giada La Gala</h1>
+            <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
 Her work is an ongoing dialogue with nature’s hidden forces, black holes, volcanoes, and the subatomic world, honouring the physicality of materials, animated by emergent phenomena. She enacts her research through performative improvisation with the use of sculptures as instruments and tools, materializing the boundary where science and art converge.</p>
 </p>
-        <p>Contact me: <a href="mailto:lafluorescienza@gmail.com">lafluorescienza@gmail.com</a></p>
+            <p>Contact me: <a href="mailto:lafluorescienza@gmail.com">lafluorescienza@gmail.com</a></p>
+        </div>
     </div>
 </body>
 </html>
