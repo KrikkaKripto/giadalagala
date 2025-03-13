@@ -25,12 +25,15 @@
             background-repeat: no-repeat;
         }
 
-        /* Text section below the image */
+        /* Transparent text section */
         .text {
-            background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
             color: white;
             text-align: center;
             padding: 40px 20px;
+            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
         }
 
         h1 {
@@ -73,6 +76,7 @@
 <body>
     <div class="image"></div> <!-- Full-screen image -->
     <div class="text">
+       
         <h1>Giada La Gala</h1>
             <p>Giada La Gala is a scientist and artist. Trained as a quantum physicist with a PhD in quantum optomechanics (AMOLF, Amsterdam, 2020), she explored the delicate dance between light and motion at the smallest scales, followed by a postdoctoral work on quantum sensing of single molecules (IIT, Genova) where she made the smaller possible holes. Her artistic practice evolved alongside and merged with collective organizations in Italy and Amsterdam. Currently pursuing a Master of Fine Arts & Design at Sandberg Instituut’s Artificial Times program (2023/2025), Giada curates in parallel projects that bridge science with artistic expression at the University of Amsterdam.
 Her work is an ongoing dialogue with nature’s hidden forces, black holes, volcanoes, and the subatomic world, honouring the physicality of materials, animated by emergent phenomena. She enacts her research through performative improvisation with the use of sculptures as instruments and tools, materializing the boundary where science and art converge.</p>
