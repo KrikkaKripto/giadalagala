@@ -142,9 +142,13 @@ const qField = root => {
     if (pOn && lastMove) { const dtm = Math.max(8, now - lastMove); pv = pv * 0.5 + 0.5 * Math.min(3000, Math.hypot(x - px, y - py) / dtm * 1000); }
     px = x; py = y; pOn = true; lastMove = now;
   };
-  root.addEventListener("pointermove", aimQ); root.addEventListener("pointerdown", aimQ);
-  root.addEventListener("pointerleave", () => { pOn = false; lastMove = 0; pv = 0; });
-  root.addEventListener("pointerup", e => { if (e.pointerType !== "mouse") pOn = false; });
+  // on touch screens a tap gives one pulse of energy (a tap does not move), and the finger stays "on" briefly after lifting
+  let tapT = 0;
+  root.addEventListener("pointermove", aimQ);
+  root.addEventListener("pointerdown", e => { aimQ(e); if (e.pointerType !== "mouse") { pv = Math.max(pv, 1400); tapT = performance.now(); } });
+  root.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") { pOn = false; lastMove = 0; pv = 0; } });
+  const lift = e => { if (e.pointerType !== "mouse") setTimeout(() => { if (performance.now() - tapT >= 380) pOn = false; }, 400); };
+  root.addEventListener("pointerup", lift); root.addEventListener("pointercancel", lift);
   const mirrors = () => { const dx = px - CX, dy = py - CY, out = [];
     for (let j = 0; j < 5; j++) { const a = 2 * Math.PI * j / 5, c = Math.cos(a), s = Math.sin(a); out.push([CX + dx * c - dy * s, CY + dx * s + dy * c]); } return out; };
   const paint = (d, re, im, Tm, o) => {

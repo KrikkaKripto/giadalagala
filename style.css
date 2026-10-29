@@ -194,6 +194,7 @@ h2 { font: 400 clamp(40px, 6vw, 72px)/1 var(--display); letter-spacing: -.01em; 
 .js .hero-q { background-image: none; }
 .hero-q::after { background: linear-gradient(transparent 78%, var(--bg)); pointer-events: none; }
 .hero-q .q-field { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-q { touch-action: pan-y pinch-zoom; }   /* sideways swipes stir the particles, up and down still scrolls */
 .hero-q .hero-text { padding: 0 var(--gutter); }
 .hero-q .name { font-size: clamp(56px, 12vw, 200px); line-height: .9; text-shadow: 0 0 34px rgba(29,27,31,.92), 0 0 10px rgba(29,27,31,.85); }
 .hero-q .roles { margin-top: 22px; text-shadow: 0 0 12px rgba(29,27,31,.95); }
@@ -395,7 +396,7 @@ figcaption { font: 12px/1.5 var(--mono); color: var(--muted); margin-top: 8px; }
 .q-box h3 { font: 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: color-mix(in srgb, #ffd63c 70%, var(--ink)); margin-bottom: 10px; }
 .q-box p { margin-top: 12px; }
 .q-stage { position: relative; overflow: hidden; border-radius: 6px; background: #121014; }
-.q-stage canvas { display: block; width: 100%; aspect-ratio: 4 / 3; }
+.q-stage canvas { display: block; width: 100%; aspect-ratio: 4 / 3; touch-action: none; }   /* in a box, every swipe stirs */
 .q-stage .q-eq { position: static; background: none; border-top: 1px solid var(--rule); border-radius: 0; padding: 10px 12px; min-height: 8.6em; font-size: 11px; }
 .q-stage .q-eq-main { font-size: 12px; }
 .q-stage .q-eq.calm { opacity: 1; }
