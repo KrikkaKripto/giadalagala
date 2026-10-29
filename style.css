@@ -406,7 +406,8 @@ figcaption { font: 12px/1.5 var(--mono); color: var(--muted); margin-top: 8px; }
   border: 1px solid var(--rule); border-radius: 99px; padding: 4px 10px; cursor: pointer; }
 .q-again:hover, .q-again:focus-visible { border-color: #ffd63c; }
 .on-touch { display: none; }
-@media (hover: none), (pointer: coarse) { .on-fine { display: none; } .on-touch { display: inline; } }
+.about-phone { display: none; color: var(--muted); max-width: 40ch; margin: -12px 0 clamp(28px, 4vw, 48px); }
+@media (hover: none), (pointer: coarse) { .on-fine { display: none; } .on-touch { display: inline; } .about-phone { display: block; } }
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 24px var(--gutter) 32px; border-top: 1px solid var(--rule); font: 11px/1.5 var(--mono); color: var(--muted); }
 
 /* ---------- lightbox ---------- */
