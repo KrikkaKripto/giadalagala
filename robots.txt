@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /inbox/
+Disallow: /tools/
+Disallow: /archive/
+Sitemap: https://giadalagala.com/sitemap.xml

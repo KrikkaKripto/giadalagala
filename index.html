@@ -1,94 +1,417 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-mood="graphite" data-darkness="3">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        /* Full-screen image section */
-        .image {
-            width: 100%;
-            height: 100vh; /* Takes full height of the viewport */
-            background-image: url('IMG_8451.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Text section below the image */
-        .content {
-            position: relative;
-            padding: 60px 20px; /* Padding for the text box */
-            background-color: rgba(0, 0, 0, 0.6); /* 60% opacity for the black background */
-            color: white;
-            text-align: center;
-            z-index: 10;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Ensuring smooth scrolling for the page */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Adding space after the content to make the scrollable page work */
-        .spacer {
-            height: 200vh; /* Makes sure there's space to scroll down */
-        }
-
-        /* Responsive Design for mobile and smaller screens */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            p {
-                font-size: 1.2em;
-            }
-
-            .image {
-                height: 50vh; /* Reduce image height on mobile */
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giada La Gala · physicist, artist, science communicator</title>
+  <meta name="description" content="Giada La Gala: physicist, artist and science communicator. Quantum optomechanics, performance with sculptural instruments, art-science collaborations on quantum technologies.">
+  <meta name="theme-color" content="#121010">
+  <meta property="og:title" content="Giada La Gala · physicist, artist, science communicator">
+  <meta property="og:description" content="Physicist, artist, science communicator.">
+  <meta property="og:image" content="https://giadalagala.com/assets/img/hero-curtain.jpg">
+  <meta property="og:url" content="https://giadalagala.com/">
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://giadalagala.com/">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Giada La Gala",
+  "url": "https://giadalagala.com/",
+  "image": "https://giadalagala.com/assets/img/hero-curtain.jpg",
+  "description": "Giada La Gala: physicist, artist and science communicator. Quantum optomechanics, performance with sculptural instruments, art-science collaborations on quantum technologies.",
+  "jobTitle": [
+    "Science communication advisor, QuSoft",
+    "Project and content lead, Quantum Delta NL"
+  ],
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Amsterdam"
+  },
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "AMOLF"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Eindhoven University of Technology"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Sandberg Institute"
+    }
+  ],
+  "knowsAbout": [
+    "quantum optomechanics",
+    "science communication",
+    "art-science collaboration",
+    "quantum technology",
+    "performance art"
+  ],
+  "sameAs": [
+    "https://qdnl.nl"
+  ]
+}
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <div class="image"></div> <!-- Full-screen image -->
-    <div class="content">
+<!-- GENERATED from content.md by tools/build.py. Edit content.md (text) or tools/template.html (layout), not this file. -->
+<a class="skip" href="#main">Skip to content</a>
 
-       
-        <h1>Giada La Gala</h1>
-            <p>Giada La Gala is a scientist and artist. Her artistic practice is a dialogue with nature's phenomena, unveiling research through performative gestures using sculptures as instruments. In her quantum physics PhD, she investigated the interaction between light and motion; in her postdoc she made the smallest possible holes.
-            She holds a PhD in quantum sensing (physics) and a Master in Fine Arts, combining an interdisciplinary background to explore how transdisciplinary research and art-science collaborations can inform and enrich reflections on the societal dimension of emerging technologies. She is an expert in science communication and outreach working at the University of Amsterdam as science communication advisor for QuSoft (research institute for quantum software) and content lead for QDNL (national Dutch quantum initiative), where she facilitates art-science collaborations centered on quantum technologies. Rooted in international collective organizations, she co-organizes and cares for collective projects which foster feminist values and approaches to do/un-do/re-do our relationship with technology.
-<p>
-    Contact at: <a href="mailto:g.lagala@uva.nl">g.lagala@uva.nl</a></p>
-        </div>
+<!-- Fixed top bar: name on the left, current facet in the middle, menu on the right -->
+<header class="bar">
+  <a class="bar-name" href="#top">giada la gala</a>
+  <span class="bar-now" aria-hidden="true"><i></i><span></span></span>
+  <a class="bar-menu" href="#sections" role="button" aria-expanded="false" aria-controls="menu">index</a>
+</header>
+
+<!-- Overlay menu -->
+<nav id="menu" class="menu" aria-label="Sections" hidden>
+  <ol>
+    <li><a href="#log"><small>now</small>Log</a></li>
+    <li><a href="#scicomm" style="--c:var(--scicomm)"><small>λ 633</small>Science communication</a></li>
+    <li><a href="#art" style="--c:var(--art)"><small>λ 589</small>Art</a></li>
+    <li><a href="#physics" style="--c:var(--physics)"><small>λ 532</small>Physics</a></li>
+    <li><a href="#writing" style="--c:var(--writing)"><small>λ 473</small>Writing</a></li>
+    <li><a href="#collectives" style="--c:var(--collectives)"><small>λ 405</small>Collectives</a></li>
+    <li><a href="#contact"><small>@</small>Contact</a></li>
+  </ol>
+  <blockquote>
+    <p>Matter feels, converses, suffers, desires, yearns and remembers.</p>
+    <footer>Karen Barad, <em>On Touching</em> (2012)</footer>
+  </blockquote>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO (build.py keeps one of the two, chosen by "hero:" in content.md) ============ -->
+<!-- live quantum particles on a five-fold quasicrystal arrive hot and cool down while the name forms; once cold, the cursor kicks them (main.js); without JS: a still of the calm state -->
+<section class="hero hero-q" id="top" data-q-mode="hero">
+  <canvas class="q-field" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <h1 class="name" data-q>Giada La&nbsp;Gala</h1>
+    <p class="roles"><a href="#physics">physicist</a> <span>·</span> <a href="#art">artist</a> <span>·</span> <a href="#scicomm">science communicator</a> <span>·</span> <a class="redact" href="#contact" data-tip="ask me in person"><span class="sr">redacted (ask me in person)</span><span aria-hidden="true">hacker</span></a></p>
+  </div>
+  <!-- the equation that draws the picture, with its live values (main.js); decorative, hidden from screen readers -->
+  <div class="q-eq" aria-hidden="true" hidden></div>
+  <a class="hero-cue" href="#intro" aria-label="Scroll to introduction">↓</a>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro" id="intro">
+  <p class="hello">Hello, this is my portfolio: a selection of things I have done, and the place where I will post updates on my current work.</p>
+  <p class="lede">I am an Amsterdam-based physicist, artist and science communicator. During my PhD I studied how light and motion interact at the smallest scales. In my artistic practice I carry that experimental approach out of the lab and into performance and installation, where light is transduced to sound and the experiment expands to meet perception and emotion. At the University of Amsterdam I work between both worlds: I write about quantum research, bring artists and quantum scientists together, and look for ways to talk about what this technology might mean for society.</p>
+</section>
+
+<!-- ============ LOG: selected entries ([x] in content.md), built by tools/build.py; main.js only filters ============ -->
+<section class="log" id="log" data-label="Log">
+  <header>
+    <h2>Log</h2>
+    <div class="chips" role="group" aria-label="Filter log">
+      <button type="button" aria-pressed="true" data-filter="all">all</button>
+      <button type="button" aria-pressed="false" data-filter="scicomm" style="--c:var(--scicomm)">scicomm</button>
+      <button type="button" aria-pressed="false" data-filter="art" style="--c:var(--art)">art</button>
+      <button type="button" aria-pressed="false" data-filter="physics" style="--c:var(--physics)">physics</button>
+      <button type="button" aria-pressed="false" data-filter="collectives" style="--c:var(--collectives)">collectives</button>
     </div>
+  </header>
+  <ol class="log-list">
+    <li class="yr" aria-hidden="true">[-- 2026 --]</li>
+  <li data-year="2026" data-sort="2026-11-05" data-facet="art" data-selected><span class="y">2026</span><p><cite>Reality comes in waves – transducing the subject</cite> <span class="where">talk at the conference <em>Bodies as Transducers</em>, Orpheus Instituut, Ghent, 5 November</span> <span class="links"><a href="https://orpheusinstituut.be/nl/events/bodies-as-transducers">event</a></span></p></li>
+  <li data-year="2026" data-sort="2026-10-19" data-facet="scicomm" data-selected><span class="y">2026</span><p><cite>Societal challenges around post-quantum cryptography</cite> <span class="where">talk, then panel with Paolo Cirio, moderated by Matteo Fabbri, SPUI25, Amsterdam</span> <span class="links"><a href="https://spui25.nl/programma/societal-challenges-around-post-quantum-cryptography">event</a> <a href="https://hva-uva.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a8f6db74-a9e7-4615-ba5f-b4d5007afc38&amp;start=0">video</a></span></p></li>
+  <li data-year="2026" data-sort="2026-07-04" data-facet="collectives" data-selected><span class="y">2026</span><p><cite>Quantum computing? What the hǝck?</cite> <span class="where">introduction to quantum computing and Qiskit workshop (with Koen Leijnse), then an assembly: quantum, culturally considered. [tbd]</span> <span class="links"><a href="https://2026.tbd.camp/day1.html">schedule</a></span></p></li>
+  <li data-year="2026" data-sort="2026-06-06" data-facet="art" data-selected><span class="y">2026</span><p><cite>Un sonido por venir</cite> <span class="where">closing presentation of the Postnatural Independent Programme, La Casa Encendida, Madrid</span> <span class="links"><a href="https://www.lacasaencendida.es/encuentros/un-sonido-por-venir-presentacion-de-resultados-pip-2026">event</a></span></p></li>
+  <li data-year="2026" data-sort="2026" data-facet="art" data-selected><span class="y">2026</span><p><cite>Postnatural Independent Programme</cite> <span class="where">Institute of Postnatural Studies, Madrid</span></p></li>
+    <li class="yr" aria-hidden="true">[-- 2025 --]</li>
+  <li data-year="2025" data-sort="2025" data-facet="scicomm" data-selected><span class="y">2025–26</span><p><cite>Amsterdam Light Festival, 14th edition</cite> <span class="where">jury member</span></p></li>
+  <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Reality comes in waves</cite> <span class="where">MFA graduation, Artificial Times, Sandberg Institute, Amsterdam</span> <span class="links"><a href="https://www.sandberg.nl/graduation-2025/graduates/37">work</a> <a href="https://metropolism.com/nl/recensie/unfinished-stories-sandberg-instituut-graduation-show-2025/">review</a> <a href="https://beta.sandberg.nl/departments/artificial-times">Artificial Times</a></span></p></li>
+  <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Faramita</cite> <span class="where">performance, OT301, Amsterdam</span> <span class="links"><a href="https://www.ot301.nl/agenda/19636">info</a></span></p></li>
+  <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Rewire 2025</cite> <span class="where">performance, Grey Space, The Hague</span></p></li>
+    <li class="yr" aria-hidden="true">[-- 2024 --]</li>
+  <li data-year="2024" data-sort="2024" data-facet="scicomm" data-selected><span class="y">2024–25</span><p><cite>Quantum &amp; art programme</cite> <span class="where">curator, University of Amsterdam</span></p></li>
+    <li class="yr" aria-hidden="true">[-- 2020 --]</li>
+  <li data-year="2020" data-sort="2020" data-facet="physics" data-selected><span class="y">2020</span><p><cite>Glancing at tiny vibrations: backaction evading measurements of mechanical motion close to the quantum regime</cite> <span class="where">PhD thesis, TU Eindhoven / AMOLF</span> <span class="links"><a href="http://library.tue.nl/csp/dare/LinkToRepository.csp?recordnumber=920378">thesis</a></span></p></li>
+  </ol>
+</section>
+
+<!-- ============ SPECTRUM INDEX: one row per facet ============ -->
+<section class="intro sections" id="sections">
+  <div class="spectrum" aria-hidden="true"></div>
+
+  <ol class="index">
+    <li style="--c:var(--scicomm)">
+      <a href="#scicomm" data-preview="assets/img/scicomm-quantum-duet.webp">
+        <small>01 · λ 633 nm</small>
+        <strong>Science communication</strong>
+        <span>QuSoft and QDNL at the University of Amsterdam</span>
+      </a>
+    </li>
+    <li style="--c:var(--art)">
+      <a href="#art" data-preview="assets/img/art-instrument.webp">
+        <small>02 · λ 589 nm</small>
+        <strong>Art</strong>
+        <span>MFA at the Sandberg Institute; performance with sculptural instruments</span>
+      </a>
+    </li>
+    <li style="--c:var(--physics)">
+      <a href="#physics" data-preview="assets/img/physics-optical-table.webp">
+        <small>03 · λ 532 nm</small>
+        <strong>Physics</strong>
+        <span>PhD in quantum optomechanics at AMOLF; Postdoc at the Italian Institute of Technology</span>
+      </a>
+    </li>
+    <li style="--c:var(--writing)">
+      <a href="#writing" data-preview="">
+        <small>04 · λ 473 nm</small>
+        <strong>Writing</strong>
+        <span>&quot;Quantum&quot; as a polysemy: a media studies paper in progress</span>
+      </a>
+    </li>
+    <li style="--c:var(--collectives)">
+      <a href="#collectives" data-preview="assets/img/collectives-tbd-poster.webp">
+        <small>05 · λ 405 nm</small>
+        <strong>Collectives</strong>
+        <span>Free software, feminist tech, and a hacklab</span>
+      </a>
+    </li>
+  </ol>
+  <img class="peek" alt="" aria-hidden="true">
+</section>
+
+<!-- ============ FACETS ============
+     Each facet: header (sticky on desktop), text, gallery, entries.
+     Entries marked [x] in content.md also appear in the Log near the top (main.js). -->
+
+<!-- 01 SCIENCE COMMUNICATION -->
+<section class="facet" id="scicomm" data-facet="scicomm" data-label="Science communication" style="--c:var(--scicomm)">
+  <header class="facet-head">
+    <small>01 · λ 633 nm</small>
+    <h2>Science communication</h2>
+    <p class="span">University of Amsterdam, now</p>
+  </header>
+  <div class="facet-body">
+    <p class="facet-lede">At the University of Amsterdam I am science communication advisor for <a href="https://www.qusoft.org">QuSoft</a>, the Dutch research centre for quantum software. There I am immersed in academic research in mathematics, theoretical physics and computer science. I write articles that help disseminate the academic research and dedicate myself to outreach projects such as the <a href="https://qdnlamsterdam.nl/experience">Quantum Experience</a>. I am also project and content lead for <a href="https://qdnl.nl">QDNL</a>, the national quantum programme. My role is setting up collaborations between artists and quantum scientists. Broadly, I look for ways to talk about what this technology might mean for society, beyond the hype.</p>
+
+    <div class="gallery-wrap">
+    <div class="gallery" role="region" tabindex="0" aria-label="Science communication pictures">
+      <figure class="wide"><img src="assets/img/scicomm-quantum-duet.webp" alt="Two performers in white overalls stand apart on a paved square, holding between them a long blue sculpture shaped like a double-headed arrow: a giant qubit." width="1520" height="765" loading="lazy"><figcaption><em>Quantum duet: miniature worlds and giant qubits</em>, World Quantum Day 2024. Performers Stefano Melissa and Livia Bertacca.</figcaption></figure>
+      <figure><img src="assets/img/scicomm-v2-poster.webp" alt="Event poster: hands holding glass spheres over a glittering, iridescent crystal frame, with the title Natalie Paneng, Iridescence &amp; Interference, Performance Lecture, 13.11, Studio Quantum, V2_." width="1080" height="1080" loading="lazy"><figcaption><em>Iridescence &amp; Interference</em>, performance lecture by Natalie Paneng, Studio Quantum, V2_, Rotterdam, 13 November 2024. Poster: V2_.</figcaption></figure>
+      <figure class="clip">
+        <video src="assets/video/scicomm-building-bloch.mp4" poster="assets/img/scicomm-building-bloch-poster.webp" width="360" height="332" muted loop playsinline controls preload="none" data-lazy aria-label="Video: a glass sphere on a 3D-printed base; inside, an arrow swings to point in different directions, showing a qubit state on the Bloch sphere."></video>
+        <figcaption><em>Building Bloch</em>, a physical Bloch sphere I developed to demonstrate qubit states and quantum logic gate operations, for the <a href="https://qdnlamsterdam.nl/experience">Quantum Experience</a>, QDNL Amsterdam.</figcaption>
+      </figure>
+      <figure><img src="assets/img/scicomm-talk.webp" alt="Giada speaks at a wooden podium with a microphone, holding a presentation clicker." width="1600" height="1200" loading="lazy"><figcaption>My talk before the panel <em><a href="https://spui25.nl/programma/societal-challenges-around-post-quantum-cryptography">Societal challenges around post-quantum cryptography</a></em>, SPUI25, Amsterdam, 2026.</figcaption></figure>
+    </div>
+    </div>
+
+    <ol class="entries">
+      <li data-year="2026" data-sort="2026-10-19" data-facet="scicomm" data-selected><span class="y">2026</span><p><cite>Societal challenges around post-quantum cryptography</cite> <span class="where">talk, then panel with Paolo Cirio, moderated by Matteo Fabbri, SPUI25, Amsterdam</span> <span class="links"><a href="https://spui25.nl/programma/societal-challenges-around-post-quantum-cryptography">event</a> <a href="https://hva-uva.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a8f6db74-a9e7-4615-ba5f-b4d5007afc38&amp;start=0">video</a></span></p></li>
+      <li data-year="2026" data-sort="2026" data-facet="scicomm"><span class="y">2026</span><p><cite>Polish art network visits UvA</cite> <span class="where">roundtable and presentation, University of Amsterdam</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="scicomm" data-selected><span class="y">2025–26</span><p><cite>Amsterdam Light Festival, 14th edition</cite> <span class="where">jury member</span></p></li>
+      <li data-year="2024" data-sort="2024" data-facet="scicomm" data-selected><span class="y">2024–25</span><p><cite>Quantum &amp; art programme</cite> <span class="where">curator, University of Amsterdam</span></p></li>
+      <li data-year="2024" data-sort="2024" data-facet="scicomm"><span class="y">2024</span><p><cite>Quantum duet: miniature worlds and giant qubits</cite> <span class="where">performance for World Quantum Day; concept Giada La Gala, music Andy Pavlov, performers Stefano Melissa and Livia Bertacca</span></p></li>
+      <li data-year="2024" data-sort="2024" data-facet="scicomm"><span class="y">2024</span><p><cite>Studio Quantum</cite> <span class="where">roundtable at <em>The Evening of Iridescence and Interference</em> with Natalie Paneng, V2_, Rotterdam</span> <span class="links"><a href="https://v2.nl/events/the-evening-of-iridescence-and-interference-with-natalie-paneng">event</a></span></p></li>
+      <li data-year="2023" data-sort="2023" data-facet="scicomm"><span class="y">2023→</span><p><cite>Quantum Experience</cite> <span class="where">QDNL Amsterdam, ongoing</span> <span class="links"><a href="https://qdnlamsterdam.nl/experience">page</a></span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 02 ART -->
+<section class="facet" id="art" data-facet="art" data-label="Art" style="--c:var(--art)">
+  <header class="facet-head">
+    <small>02 · λ 589 nm</small>
+    <h2>Art</h2>
+    <p class="span">Sandberg Institute MFA 2023 to 2025 · Postnatural Independent Programme 2026 · now</p>
+  </header>
+  <div class="facet-body">
+    <p class="facet-lede">My artistic practice allows me to reinvent the experimental approach I cultivated as a physicist in the lab. I am particularly drawn to concepts and ideas that belong to philosophy and social science. Therefore the practice is constantly negotiating with academic research in these fields. In <em>Reality comes in waves</em> I show research through performance and installation: light is transduced to sound. Central, however, is the dialogue between the performative gesture and the listener. It is there that the physics experiment expands to meet perception and emotion. I am interested in the concept of individuation (derived from Simondon), as constant transformation, in the material and immaterial (re-)configurations that are mediated by technical objects. I did my MFA at the Sandberg Institute in Amsterdam (<a href="https://beta.sandberg.nl/departments/artificial-times">Artificial Times</a>, 2023 to 2025), graduating with <em>Reality comes in waves</em>, and in 2026 joined the Postnatural Independent Programme of the Institute of Postnatural Studies in Madrid.</p>
+
+    <div class="gallery-wrap">
+    <div class="gallery" role="region" tabindex="0" aria-label="Art pictures">
+      <figure><img src="assets/img/art-instrument.webp" alt="Close-up of a hanging metal sculpture whose lines loop like a drawing, lit in violet against a concrete wall." width="1600" height="1200" loading="lazy"><figcaption>The instrument of <em>Reality comes in waves</em>.</figcaption></figure>
+      <figure><img src="assets/img/art-rciw-performance.webp" alt="In a large brick hall, a violinist plays at a music stand on the left; on the right Giada stands with her back to the camera, facing a hanging metal sculpture lit by a white spotlight, while thin red laser lines cross the walls and the floor." width="1750" height="1167" loading="lazy"><figcaption><em>Reality comes in waves</em>, performance with my sister Delia La Gala on violin, Thomaskerk, Amsterdam, 2025. Photo: Tom Philip Janssen.</figcaption></figure>
+      <figure><img src="assets/img/art-rciw-installation.webp" alt="A hanging metal sculpture on a tall curved stand in the corner of a brick hall, lit by a white spotlight; its shadows fall in blue and pink on the walls above." width="1167" height="1750" loading="lazy"><figcaption><em>Reality comes in waves</em> at the Sandberg graduation show, Thomaskerk, Amsterdam, 2025. Photo: Tom Philip Janssen.</figcaption></figure>
+      <figure class="clip">
+        <video src="assets/video/art-installation-view.mp4" poster="assets/img/art-installation-view-poster.webp" width="540" height="960" muted loop playsinline controls preload="none" data-lazy aria-label="Video: a visitor walks up to a hanging sculpture on a tall curved steel stand; a line drawing on the concrete wall behind it glows in violet light."></video>
+        <figcaption><em>Reality comes in waves</em>, installation view at Zero(one), Thomaskerk, Amsterdam, 2025 (<a href="https://metropolism.com/nl/recensie/unfinished-stories-sandberg-instituut-graduation-show-2025/">review in Metropolis M</a>). An interactive installation: the instrument is pushed away by changes in light and records every interaction.</figcaption>
+      </figure>
+      <figure><img src="assets/img/art-diffraction.webp" alt="Red laser light spreads into a diffraction pattern in the dark: glowing ribbons of light around two crossing red lines." width="1600" height="1200" loading="lazy"><figcaption>Laser light diffracted through glass.</figcaption></figure>
+      <figure><img src="assets/img/art-laser-hand.webp" alt="Close-up of an open hand; two red laser lines cross on the palm in a glowing X, while the other hand holds the small laser modules and their wires." width="1600" height="1200" loading="lazy"><figcaption>Two laser lines cross in an open palm.</figcaption></figure>
+      <figure><img src="assets/img/art-performance-lasers.webp" alt="In a dark hall, Giada stands with her arms raised, playing a hanging metal instrument; a red laser line crosses the wall horizontally and another runs vertically from the ceiling, while a spotlight throws the sculpture&#x27;s shadow onto the wall." width="1200" height="1600" loading="lazy"><figcaption>Performance with the instrument, crossed by laser lines.</figcaption></figure>
+      <figure><img src="assets/img/art-suburbia1.webp" alt="A performer in black, seen from behind with one arm raised; a red laser line falls across her shoulder and arm." width="697" height="946" loading="lazy"><figcaption><em>Suburbia</em>, Garage Noord, Amsterdam, 2025.</figcaption></figure>
+      <figure><img src="assets/img/art-suburbia2.webp" alt="Thin metal lines spread like a drawing in the dark, gathered at a single point." width="703" height="950" loading="lazy"><figcaption><em>Suburbia</em>: the instrument.</figcaption></figure>
+      <figure><img src="assets/img/art-suburbia3.webp" alt="A spotlight on a draped curtain casts the shadow of a metal instrument; thin red laser lines run vertically and horizontally across the fabric." width="744" height="951" loading="lazy"><figcaption><em>Suburbia</em>: shadows and laser lines on the curtain.</figcaption></figure>
+    </div>
+    </div>
+
+    <ol class="entries">
+      <li data-year="2026" data-sort="2026-11-05" data-facet="art" data-selected><span class="y">2026</span><p><cite>Reality comes in waves – transducing the subject</cite> <span class="where">talk at the conference <em>Bodies as Transducers</em>, Orpheus Instituut, Ghent, 5 November</span> <span class="links"><a href="https://orpheusinstituut.be/nl/events/bodies-as-transducers">event</a></span></p></li>
+      <li data-year="2026" data-sort="2026-06-06" data-facet="art" data-selected><span class="y">2026</span><p><cite>Un sonido por venir</cite> <span class="where">closing presentation of the Postnatural Independent Programme, La Casa Encendida, Madrid</span> <span class="links"><a href="https://www.lacasaencendida.es/encuentros/un-sonido-por-venir-presentacion-de-resultados-pip-2026">event</a></span></p></li>
+      <li data-year="2026" data-sort="2026" data-facet="art" data-selected><span class="y">2026</span><p><cite>Postnatural Independent Programme</cite> <span class="where">Institute of Postnatural Studies, Madrid</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art"><span class="y">2025</span><p><cite>Fruiting Bodies</cite> <span class="where">residency, Massia, Estonia</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Reality comes in waves</cite> <span class="where">MFA graduation, Artificial Times, Sandberg Institute, Amsterdam</span> <span class="links"><a href="https://www.sandberg.nl/graduation-2025/graduates/37">work</a> <a href="https://metropolism.com/nl/recensie/unfinished-stories-sandberg-instituut-graduation-show-2025/">review</a> <a href="https://beta.sandberg.nl/departments/artificial-times">Artificial Times</a></span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Faramita</cite> <span class="where">performance, OT301, Amsterdam</span> <span class="links"><a href="https://www.ot301.nl/agenda/19636">info</a></span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art"><span class="y">2025</span><p><cite>Zero(one)</cite> <span class="where">exhibition and performance, Thomaskerk, Amsterdam</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art" data-selected><span class="y">2025</span><p><cite>Rewire 2025</cite> <span class="where">performance, Grey Space, The Hague</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art"><span class="y">2025</span><p><cite>Suburbia</cite> <span class="where">performance, Garage Noord, Amsterdam</span></p></li>
+      <li data-year="2025" data-sort="2025" data-facet="art"><span class="y">2025</span><p><cite>Performance</cite> <span class="where">Jedna Dva Tři gallery, Prague</span></p></li>
+      <li data-year="2024" data-sort="2024" data-facet="art"><span class="y">2024</span><p><cite>Rewire 2024</cite> <span class="where">performance, Grey Space, The Hague</span></p></li>
+      <li data-year="2024" data-sort="2024" data-facet="art"><span class="y">2024</span><p><cite>It’s not that far</cite> <span class="where">exhibition and performance with Artificial Times, Het HEM, Zaandam</span> <span class="links"><a href="https://hethem.nl/en/Het-Hem/Calendar/2024/02/Artificial-Times">info</a></span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 03 PHYSICS -->
+<section class="facet" id="physics" data-facet="physics" data-label="Physics" style="--c:var(--physics)">
+  <header class="facet-head">
+    <small>03 · λ 532 nm</small>
+    <h2>Physics</h2>
+    <p class="span">PhD 2016 to 2020 · Postdoc 2021 to 2022</p>
+  </header>
+  <div class="facet-body">
+    <p class="facet-lede">How do you look at something without disturbing it? Close to the quantum regime, every measurement changes what it measures. My PhD at <a href="https://amolf.nl/research-groups/photonic-forces">AMOLF</a>, in the Photonic Forces group, worked near that limit: I built tiny vibrating beams, used laser light to measure them, and tried to quickly glance at their motion so that it wouldn&#x27;t be disturbed. Even thermal noise became a signal, written into the light that left them. During a one-year postdoctoral fellowship at the Italian Institute of Technology (2021 to 2022), I contributed to the development of nanopore sensing technologies exploiting anti-Stokes Raman scattering, aimed at sequencing single proteins.</p>
+
+    <div class="gallery-wrap">
+    <div class="gallery" role="region" tabindex="0" aria-label="Physics pictures">
+      <figure><img src="assets/img/physics-optical-table.webp" alt="My optical table at AMOLF crowded with mirrors, lenses on posts, fibre cables and detectors." width="1000" height="1333" loading="lazy"><figcaption>The optical table at AMOLF.</figcaption></figure>
+      <figure class="clip">
+        <video src="assets/video/physics-nanobeam-sem.mp4" poster="assets/img/physics-nanobeam-sem-poster.webp" width="540" height="540" muted loop playsinline controls preload="none" data-lazy aria-label="Electron-microscope video: a probe tip moves against a photonic-crystal nanobeam, a strip of silicon perforated with a row of holes."></video>
+        <figcaption>A photonic-crystal nanobeam meets a probe tip, filmed in the electron microscope at AMOLF. Scale bar: 5 µm.</figcaption>
+      </figure>
+      <figure><img src="assets/img/physics-poster.webp" alt="Scientific poster from AMOLF: diagrams of an optomechanical experiment, plots of measurement noise and reconstructed mechanical states, with the paper title and authors G. R. La Gala, J. T. Muhonen, R. Leijssen and E. Verhagen." width="863" height="1227" loading="lazy"><figcaption>Research poster on <em>State preparation and tomography of a nanomechanical resonator with fast light pulses</em>, AMOLF, 2019.</figcaption></figure>
+      <figure><img src="assets/img/physics-thesis.webp" alt="Thesis cover: hand-drawn suns and starbursts in orange, blue and yellow on black, with the handwritten title Glancing at Tiny Vibrations." width="950" height="1334" loading="lazy"><figcaption><em>Glancing at tiny vibrations</em>, 2020.</figcaption></figure>
+    </div>
+    </div>
+
+    <ol class="entries">
+      <li data-year="2023" data-sort="2023" data-facet="physics"><span class="y">2023</span><p><cite>Quadrature-averaged homodyne detection for estimating cavity parameters</cite> <span class="where">Physical Review Applied</span> <span class="links"><a href="https://doi.org/10.1103/physrevapplied.19.064006">doi</a> <a href="https://arxiv.org/abs/2209.05807">arxiv</a></span></p></li>
+      <li data-year="2022" data-sort="2022" data-facet="physics"><span class="y">2022</span><p><cite>Nanomechanical design strategy for single-mode optomechanical measurement</cite> <span class="where">Journal of Physics D</span> <span class="links"><a href="https://doi.org/10.1088/1361-6463/ac569d">doi</a></span></p></li>
+      <li data-year="2020" data-sort="2020" data-facet="physics" data-selected><span class="y">2020</span><p><cite>Glancing at tiny vibrations: backaction evading measurements of mechanical motion close to the quantum regime</cite> <span class="where">PhD thesis, TU Eindhoven / AMOLF</span> <span class="links"><a href="http://library.tue.nl/csp/dare/LinkToRepository.csp?recordnumber=920378">thesis</a></span></p></li>
+      <li data-year="2019" data-sort="2019" data-facet="physics"><span class="y">2019</span><p><cite>State preparation and tomography of a nanomechanical resonator with fast light pulses</cite> <span class="where">Physical Review Letters</span> <span class="links"><a href="https://doi.org/10.1103/physrevlett.123.113601">doi</a> <a href="https://arxiv.org/abs/1812.09720">arxiv</a></span></p></li>
+      <li data-year="2017" data-sort="2017" data-facet="physics"><span class="y">2017</span><p><cite>Nonlinear cavity optomechanics with nanomechanical thermal fluctuations</cite> <span class="where">Nature Communications</span> <span class="links"><a href="https://doi.org/10.1038/ncomms16024">doi</a></span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 04 WRITING -->
+<section class="facet" id="writing" data-facet="writing" data-label="Writing" style="--c:var(--writing)">
+  <header class="facet-head">
+    <small>04 · λ 473 nm</small>
+    <h2>Writing</h2>
+    <p class="span">in progress</p>
+  </header>
+  <div class="facet-body">
+    <p class="facet-lede">I am writing a paper in media studies on &quot;quantum&quot; as a polysemy. A draft is available on request.</p>
+
+    <ol class="entries">
+      <li data-year="2026" data-sort="2026" data-facet="writing"><span class="y">2026</span><p><cite>Quantum as polysemy</cite> <span class="where">paper in media studies, in preparation</span> <span class="links"><a href="#contact">ask for draft</a></span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 05 COLLECTIVES -->
+<section class="facet" id="collectives" data-facet="collectives" data-label="Collectives" style="--c:var(--collectives)">
+  <header class="facet-head">
+    <small>05 · λ 405 nm</small>
+    <h2>Collectives</h2>
+    <p class="span">ongoing</p>
+  </header>
+  <div class="facet-body">
+    <p class="facet-lede">I care for collective projects that bring feminist values and practices to how we <em>do, un-do and re-do</em> our relationship with technology. I am close to the free software community and I am part of a collective hacklab, where we <span class="redact" tabindex="0" data-tip="come and see"><span class="sr">redacted (come and see)</span><span aria-hidden="true">do things</span></span> and <span class="redact" tabindex="0" data-tip="ask in person"><span class="sr">redacted (ask in person)</span><span aria-hidden="true">teach things</span></span>.</p>
+
+    <div class="gallery-wrap">
+    <div class="gallery" role="region" tabindex="0" aria-label="Collectives pictures">
+      <figure><img src="assets/img/collectives-tbd-poster.webp" alt="Bright green poster: &quot;Ruimte voor quantum computing? What the hǝck?&quot;, with drawings of Bloch spheres, 4 July 2026." width="1000" height="1414" loading="lazy"><figcaption><em>Ruimte voor quantum computing? What the hǝck?</em>, 4 July 2026, at [tbd].</figcaption></figure>
+      <figure><img src="assets/img/collectives-tbd-qiskit.webp" alt="Bright green poster for the Qiskit workshop, 4 July 2026, 13:00–14:30, with Bloch sphere drawings." width="1000" height="1414" loading="lazy"><figcaption>The Qiskit workshop.</figcaption></figure>
+      <figure><img src="assets/img/collectives-tbd-culture.webp" alt="Bright green poster: &quot;culturally considered&quot;, 4 July 2026, 17:30–18:30, with Bloch sphere drawings." width="1000" height="1414" loading="lazy"><figcaption><em>Quantum, culturally considered</em>: an assembly on the social side of quantum technology.</figcaption></figure>
+      <figure><img src="assets/img/collectives-tbd-timetable.webp" alt="Bright green poster with the timetable: 13:00 intro to quantum, 13:30 Qiskit workshop, 17:30 quantum, culturally considered." width="1000" height="1414" loading="lazy"><figcaption>The timetable of the day.</figcaption></figure>
+    </div>
+    </div>
+
+    <ol class="entries">
+      <li data-year="2026" data-sort="2026-07-04" data-facet="collectives" data-selected><span class="y">2026</span><p><cite>Quantum computing? What the hǝck?</cite> <span class="where">introduction to quantum computing and Qiskit workshop (with Koen Leijnse), then an assembly: quantum, culturally considered. [tbd]</span> <span class="links"><a href="https://2026.tbd.camp/day1.html">schedule</a></span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" data-label="Contact">
+  <h2>Write to me</h2>
+  <p><a class="mail" href="mailto:mail@giadalagala.com">mail@giadalagala.com</a></p>
+  <p class="elsewhere">
+    <a href="https://www.qusoft.org">qusoft</a>
+    <a href="https://qdnl.nl">qdnl</a>
+  </p>
+</section>
+
+<!-- ============ ABOUT THE FRONT PAGE (content.md "# About the front page") ============ -->
+<section class="about-q" id="about-front-page">
+  <h2>About the front page</h2>
+  <p class="about-lead">The top of this page is a small drawing of quantum waves you can touch.</p>
+  <div class="about-cols">
+    <div>
+      <h3>What you see</h3>
+      <p>Each blob of light is the wave of a cold atom, sitting in its own tiny trap. Together they behave as one wave spread over all the traps, so neighbours can interfere. The traps sit on a quasicrystal: a pattern with five-fold symmetry that is ordered but never repeats, famous for its five-fold diffraction. Its points are the corners of a Penrose tiling, the pattern Roger Penrose found in the 1970s: two kinds of rhombus that cover the plane without ever repeating.</p>
+      <p>When the page opens the atoms are hot. A hot atom is a mixture of many states, a pale blur without a definite phase. As they cool, a growing part of each settles into one coherent wave, and colour appears: it shows the phase of the wave. Once they are cold, <span class="on-fine">moving the cursor</span><span class="on-touch">moving your finger</span> kicks them: the waves near it get a push, tilt into stripes and interfere with their neighbours, and the motion spreads to the waves around them before they settle again. Everything you do is mirrored five times around the centre.</p>
+    </div>
+    <div>
+      <h3>The physics</h3>
+      <p>A hot atom is a thermal mixture: a statistical mix of many waves with random phases, so it is not a single wave with a phase. As it cools, a coherent fraction f grows, until the mixture becomes a pure state, which has a phase. Even then the wave keeps a width σ₀, because a quantum particle cannot sit still at a single point. Brightness shows where an atom is likely to be found, |Ψ|²; colour shows the phase of its wave, arg Ψ.</p>
+      <p class="about-eq">n(r) = f |Ψ<sub>c</sub>(r)|² + (1−f) Σ<sub>j</sub> g<sub>T</sub>(r−r<sub>j</sub>) &nbsp;·&nbsp; f = 1 − (T/T<sub>c</sub>)²<br>Ψ(r,t) = Σ<sub>j</sub> e<sup>−|r−r<sub>j</sub>|²/2σ²</sup> e<sup>i(k·(r−r<sub>j</sub>) − ωt)</sup><br>ΔE = ħΩ [ (σ/σ<sub>0</sub>)² + (σ<sub>0</sub>/σ)² + (kσ<sub>0</sub>)² ] / 2 − ħΩ</p>
+      <p class="about-honest">This is a drawing made with the equations of quantum mechanics, not a simulation: the formulas are real, the timing is choreographed. The cooling follows a prescribed curve, the settling after a kick is a smooth fade, and the fraction f is borrowed from Bose–Einstein condensation, where many atoms share one wave. Interference happens with light and water too. The more specifically quantum parts are reading the wave as a probability, the width that remains at zero temperature, and the difference between a mixture and a pure state.</p>
+    </div>
+  </div>
+  <p class="about-try">Below are three smaller versions of the experiment, each showing one idea on its own. <span class="on-fine">Move the cursor over them</span><span class="on-touch">Touch them</span>, or press restart.</p>
+<div class="q-boxes">
+  <div class="q-box">
+    <h3>Heat</h3>
+    <div class="q-stage" data-q-mode="heat" hidden>
+      <canvas class="q-field" aria-hidden="true"></canvas>
+      <button class="q-again" type="button">restart</button>
+      <div class="q-eq" aria-hidden="true" hidden></div>
+    </div>
+    <p>The atoms arrive hot and cool down, as at the top of the page, and <span class="on-fine">the cursor</span><span class="on-touch">your finger</span> heats them up again: they turn back into a pale mixture without a phase. The heat spreads to their neighbours, and when you stop they cool down again.</p>
+  </div>
+  <div class="q-box">
+    <h3>Kick</h3>
+    <div class="q-stage" data-q-mode="kick" hidden>
+      <canvas class="q-field" aria-hidden="true"></canvas>
+      <button class="q-again" type="button">restart</button>
+      <div class="q-eq" aria-hidden="true" hidden></div>
+    </div>
+    <p>No temperature at all: every atom starts in its lowest-energy state, a pure wave at rest. <span class="on-fine">The cursor</span><span class="on-touch">Your finger</span> kicks them, and ΔE shows the energy of the most excited one.</p>
+  </div>
+  <div class="q-box">
+    <h3>Release</h3>
+    <div class="q-stage" data-q-mode="release" hidden>
+      <canvas class="q-field" aria-hidden="true"></canvas>
+      <button class="q-again" type="button">restart</button>
+      <div class="q-eq" aria-hidden="true" hidden></div>
+    </div>
+    <p>The traps switch off. Each wave spreads freely, overlaps its neighbours and interferes with them. Then the expansion runs backwards and the waves refocus into their traps. <span class="on-fine">The cursor</span><span class="on-touch">Your finger</span> releases the atoms near it.</p>
+    <p class="about-honest">Running the expansion backwards stands in for what a lab would do: switch the traps back on and cool. Spreading waves get fainter, so the brightness is rescaled, like a camera&#x27;s auto-exposure. The same formula also describes a laser beam spreading out.</p>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>No cookies, no trackers, nothing loaded from anyone else&#x27;s server.</p>
+  <p>© 2026 Giada La Gala</p>
+</footer>
+
+<dialog class="lightbox" aria-label="Image viewer">
+  <button type="button" class="lb-close" aria-label="Close">×</button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+
 </body>
 </html>
